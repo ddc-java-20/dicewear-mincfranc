@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html
+  lang="en">
+
+  <head>
+    <meta charset="utf-8">
+    <title>Diceware</title>
+  </head>
+
+  <body>
+    <ol>
+      <li th:each="word : ${words}" th:text="${word}">No words found!</li>
+    </ol>
+  </body>
+
+</html>
