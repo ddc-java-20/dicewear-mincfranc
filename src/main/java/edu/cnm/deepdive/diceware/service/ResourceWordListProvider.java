@@ -26,7 +26,7 @@ public class ResourceWordListProvider implements WordListProvider {
       //any object we initialize in try parentheses will close automatically
       //it searches line by line and will return a URI
       words = lines
-          .map((line) -> WORD_EXTRACTOR.matcher(line))
+          .map(WORD_EXTRACTOR::matcher)
           .map((matcher) -> matcher.replaceAll("$1"))
           .filter((word) -> !word.isEmpty())  //if it's an empty string, the filter will evaluate to false and take it out
           .toList();
